@@ -17,7 +17,7 @@
 JNIEXPORT void JNICALL Java_com_jayson_jni_windows_NativeMethods_HelloWorldStatic
   (JNIEnv *env, jclass clz)
  {
-    printf("Hello World! I am in jni, and i am static method;");
+    printf("Hello World! I am in jni, and i am static method;\r\n");
  }
 
 /*
@@ -28,5 +28,5 @@ JNIEXPORT void JNICALL Java_com_jayson_jni_windows_NativeMethods_HelloWorldStati
 JNIEXPORT void JNICALL Java_com_jayson_jni_windows_NativeMethods_HelloWorldDynamic
   (JNIEnv *env, jobject obj)
 {
-    printf("Hello World! I am in jni, and i am dynamic method;");
+    printf("Hello World! I am in jni, and i am dynamic method;\r\n");
 }
