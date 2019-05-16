@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".activity.LocalActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/title_and_back"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#7C7C7C"
+        android:gravity="center"
+        android:text="@string/progressive_title_local"
+        android:textColor="#FFF"
+        android:textSize="28sp" />
+
+    <ImageView
+        android:id="@+id/img_local"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

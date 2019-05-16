@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ProgressiveImage</string>
+    <string name="progressive_local">本地图片渐进加载</string>
+    <string name="progressive_net">网络图片渐进加载</string>
+    <string name="progressive_title_local">我是加载本地渐进式图片的页面</string>
+    <string name="progressive_title_net">我是加载网络渐进式图片的页面</string>
 </resources>
