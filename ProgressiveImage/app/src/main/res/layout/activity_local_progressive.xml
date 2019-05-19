@@ -7,14 +7,9 @@
     tools:context=".activity.LocalProgressiveActivity">
 
     <TextView
-        android:id="@+id/title_local_progressive"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:background="#7C7C7C"
-        android:gravity="center"
-        android:text="@string/progressive_title_local"
-        android:textColor="#FFF"
-        android:textSize="28sp" />
+        android:id="@+id/title_net_progressive"
+        style="@style/TitleLoad"
+        android:text="@string/progressive_title_local" />
 
     <ImageView
         android:id="@+id/img_local"
