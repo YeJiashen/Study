@@ -3,6 +3,8 @@ package com.jayson.progressive;
 import android.app.Application;
 import android.content.Context;
 
+import java.io.Closeable;
+import java.io.IOException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -34,5 +36,20 @@ public class App extends Application {
 
     public static ExecutorService getEs() {
         return es;
+    }
+
+    /**
+     * 关闭流
+     *
+     * @param stream 输入/输出流
+     */
+    public static void closeStream(Closeable stream) {
+        if (stream != null) {
+            try {
+                stream.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }

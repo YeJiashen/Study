@@ -11,10 +11,9 @@ import com.jayson.progressive.App;
 import com.jayson.progressive.R;
 
 import java.io.ByteArrayOutputStream;
+import java.io.Closeable;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 /**
  * @author Ye Jiashen
@@ -60,13 +59,7 @@ public class LocalProgressiveActivity extends AppCompatActivity {
                 }
             } catch (IOException ignore) {
             } finally {
-                if (is != null) {
-                    try {
-                        is.close();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
+                App.closeStream(is);
             }
         });
     }
