@@ -10,8 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.NetActivity" />
-        <activity android:name=".activity.LocalActivity" />
+        <activity android:name=".activity.NetProgressiveActivity" />
+        <activity android:name=".activity.LocalProgressiveActivity" />
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

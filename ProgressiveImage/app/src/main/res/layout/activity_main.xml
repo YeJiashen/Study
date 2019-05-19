@@ -8,14 +8,14 @@
 
     <TextView
         android:gravity="center"
-        android:id="@+id/local_img_button"
+        android:id="@+id/local_progressive_img_button"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:text="@string/progressive_local" />
     <TextView
         android:gravity="center"
-        android:id="@+id/net_img_button"
+        android:id="@+id/net_progressive_img_button"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"

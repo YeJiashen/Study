@@ -4,20 +4,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activity.NetActivity">
+    tools:context=".activity.LocalProgressiveActivity">
 
     <TextView
-        android:id="@+id/title_and_back"
+        android:id="@+id/title_local_progressive"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="#7C7C7C"
         android:gravity="center"
-        android:text="@string/progressive_title_net"
+        android:text="@string/progressive_title_local"
         android:textColor="#FFF"
         android:textSize="28sp" />
 
     <ImageView
-        android:id="@+id/img_net"
+        android:id="@+id/img_local"
         android:scaleType="centerInside"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

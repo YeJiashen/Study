@@ -18,19 +18,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        findViewById(R.id.local_img_button).setOnClickListener(this);
-        findViewById(R.id.net_img_button).setOnClickListener(this);
+        findViewById(R.id.local_progressive_img_button).setOnClickListener(this);
+        findViewById(R.id.net_progressive_img_button).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         Intent i = new Intent();
         switch (view.getId()) {
-            case R.id.local_img_button:
-                i.setClass(this, LocalActivity.class);
+            case R.id.local_progressive_img_button:
+                i.setClass(this, LocalProgressiveActivity.class);
                 break;
-            case R.id.net_img_button:
-                i.setClass(this, NetActivity.class);
+            case R.id.net_progressive_img_button:
+                i.setClass(this, NetProgressiveActivity.class);
                 break;
             default:
                 break;
