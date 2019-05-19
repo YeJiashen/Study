@@ -37,6 +37,16 @@ public class NetProgressiveActivity extends AppCompatActivity {
      * 图片控件
      */
     private ImageView img;
+
+    /**
+     * 是否正在加载的标记
+     */
+    private boolean isLoading = false;
+
+    /**
+     * 加载是否结束的标记
+     */
+    private boolean isFinish = false;
     /**
      * 服务器图片的总长度
      */
@@ -102,6 +112,8 @@ public class NetProgressiveActivity extends AppCompatActivity {
             Log.d(TAG, "Is need get more img stream: " + (offset < totalSize));
             if (offset < totalSize) {
                 h.sendEmptyMessage(GET_MORE_IMG_STREAM);
+            } else {
+                isFinish = true;
             }
         }
     };
@@ -111,6 +123,7 @@ public class NetProgressiveActivity extends AppCompatActivity {
     private Handler h = new Handler(msg -> {
         switch (msg.what) {
             case GET_MORE_IMG_STREAM:
+                if (isFinish) break;
                 client.newCall(getRequest(current + 1, current + 1 + STEP)).enqueue(callback);
                 break;
             default:
@@ -125,7 +138,17 @@ public class NetProgressiveActivity extends AppCompatActivity {
         setContentView(R.layout.activity_net_progressive);
         img = findViewById(R.id.img_net);
 
-        findViewById(R.id.title_net_progressive).setOnClickListener(v -> h.sendEmptyMessage(GET_MORE_IMG_STREAM));
+        findViewById(R.id.title_net_progressive).setOnClickListener(v -> {
+            if (isLoading) return;
+            isLoading = true;
+            h.sendEmptyMessage(GET_MORE_IMG_STREAM);
+        });
+    }
+
+    @Override
+    public void finish() {
+        isFinish = true;
+        super.finish();
     }
 
     /**
