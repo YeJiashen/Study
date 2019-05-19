@@ -2,9 +2,9 @@ package com.jayson.progressive.activity;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
 
@@ -125,7 +125,7 @@ public class NetProgressiveActivity extends AppCompatActivity {
         setContentView(R.layout.activity_net_progressive);
         img = findViewById(R.id.img_net);
 
-        findViewById(R.id.title_net_progressive).setOnClickListener(v -> h.sendEmptyMessage(GET_MORE_IMG_STREAM));
+        findViewById(R.id.title_local_progressive).setOnClickListener(v -> h.sendEmptyMessage(GET_MORE_IMG_STREAM));
     }
 
     /**

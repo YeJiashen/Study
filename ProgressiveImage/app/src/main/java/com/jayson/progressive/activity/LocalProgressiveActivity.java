@@ -31,7 +31,7 @@ public class LocalProgressiveActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_local_progressive);
         img = findViewById(R.id.img_local);
-        findViewById(R.id.title_net_progressive).setOnClickListener(v -> loadProgressiveImage());
+        findViewById(R.id.title_local_progressive).setOnClickListener(v -> loadProgressiveImage());
     }
 
     /**
